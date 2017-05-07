@@ -3,8 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from './components/Home';
 import UserPage from './components/UserPage';
-import './App.css';
-import logo from './logo.svg';
+import NavBar from './components/NavBar';
 
 class App extends Component {
 
@@ -12,15 +11,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to React</h2>
-          </div>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
+          <NavBar />
           <Route exact path="/" component={Home}/>
-          <Route path="/users/:userId" component={UserPage}/>
+          <Route path="/users/:id" component={UserPage}/>
+          <Route path="/contant" component={Home}/>
         </div>
       </BrowserRouter>
     );

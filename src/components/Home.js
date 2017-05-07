@@ -24,11 +24,8 @@ class Home extends Component {
   render() {
     return(
       <div className="App">
-
-        <button onClick={() => {console.log('hello!')}}> click me!</button>
-
+        {this.state.isFetching && (<h4>fetching...</h4>)}
         {!this.state.isFetching && (<ListItem users={this.state.users}/>)}
-
       </div>
     )
   }
